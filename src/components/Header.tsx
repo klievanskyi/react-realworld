@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom'
+
 function Header() {
   return (
     <nav className="navbar navbar-light">
       <div className="container">
-        <a className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" to="/a">
           conduit
-        </a>
+        </Link>
         <ul className="nav navbar-nav pull-xs-right">
           <li className="nav-item">
             {/* Add "active" class when you're on that page"  */}
-            <a className="nav-link active" href="">
+            <Link className="nav-link active" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="">
@@ -25,14 +27,14 @@ function Header() {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={`/login`}>
               Sign in
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="">
+            <Link className="nav-link" to={`/register`}>
               Sign up
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
